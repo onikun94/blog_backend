@@ -147,6 +147,7 @@ if not DEBUG:
     import django_heroku #追加
     django_heroku.settings(locals()) #追加
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
