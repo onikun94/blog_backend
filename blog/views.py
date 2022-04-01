@@ -54,3 +54,12 @@ class ListTitle(APIView):
         for b in blog
         ]
         return Response(res)
+
+class ListTest(generics.ListCreateAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
+    
+    def get_queryset(self):
+        queryset = Blog.objects.all()
+        page = self.request.query_params.get('page',None)
+        return queryset
