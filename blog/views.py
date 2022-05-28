@@ -30,7 +30,7 @@ class OnlyBlog(generics.ListCreateAPIView):
             }
             return Response(res)
         except:
-            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response("i don't know server error",status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # class ListTitle(generics.ListCreateAPIView):
 #     queryset = Blog.objects.filter('title')
