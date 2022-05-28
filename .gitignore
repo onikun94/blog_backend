@@ -1,4 +1,11 @@
+__pycache__/*
 __pycache__
 db.sqlite3
 .DS_Store
 local_settings.py
+
+migrations
+*.pyc
+
+Pipfile
+Pipfile.lock
