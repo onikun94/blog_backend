@@ -20,7 +20,7 @@ from django.conf.urls import static, url
 from django.views.static import serve  #追加
 
 from . import settings
-from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
+# from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 
 
 urlpatterns = [
