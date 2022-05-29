@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf.urls import static, url
+from django.views.static import serve  #追加
+
 from . import settings
 from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 
@@ -24,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/',include('blog.urls')),
     path('markdownx/', include('markdownx.urls')), 
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),  #追加
 ]
 
 if settings.DEBUG:
