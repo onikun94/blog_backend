@@ -21,6 +21,7 @@ class OnlyBlog(generics.ListCreateAPIView):
                 'updated_at':blog.updated_at,
                 'title':blog.title,
                 'contents':blog.contents,
+                'image':blog.image
             }
             return Response(res)
         except:
